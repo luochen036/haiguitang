@@ -1,0 +1,26 @@
+# 数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/luohaigui?useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 210613
+server:
+  port: 8888
+  servlet:
+    context-path: /api
+# 接口文档配置
+  knife4j:
+    enable: true
+    openapi:
+      title: 洛尘的接口文档
+      group:
+        default:
+          group-name: 默认分组
+          api-rule: package
+          api-rule-resources:
+            - com.example.luohaigui.controller
+
+# 接入AI配置
+ai:
+    apiKey: c5c9988b-c5be-4074-b634-1ec01bb30bab
